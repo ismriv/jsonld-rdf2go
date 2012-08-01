@@ -30,5 +30,6 @@ Add the following dependency in the pom.xml:
 Examples
 --------
 
-This project adds 2 new classes: RDF2GoTripleCallback and RDF2GoJSONLDSerializer. They are using for adding JSON-LD data to your RDF model, and to serialize an RDF2Go model to JSON-LD.
+This project adds 2 new classes: RDF2GoTripleCallback and RDF2GoJSONLDSerializer. They add the connectors to add JSON-LD data to an RDF2Go model, and to serialize an RDF2Go model into a JSON-LD document.
+
 The examples provided for Sesame and Jena at https://github.com/tristan/jsonld-java/blob/master/README.md#code-example are also applicable for this extension.
