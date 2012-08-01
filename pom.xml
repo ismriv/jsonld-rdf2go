@@ -17,10 +17,10 @@
 	
 	<developers>
 		<developer>
-			  <name>Ismael Rivera</name>
-			  <url>http://www.deri.ie/about/team/member/ismael_rivera</url>
-			  <organization>DERI (NUIG)</organization>
-			  <organizationUrl>http://www.deri.ie</organizationUrl>
+				<name>Ismael Rivera</name>
+				<url>http://www.deri.ie/about/team/member/ismael_rivera</url>
+				<organization>DERI (NUIG)</organization>
+				<organizationUrl>http://www.deri.ie</organizationUrl>
 		</developer>
 	</developers>
 	
@@ -86,4 +86,13 @@
 		</dependency>
 	</dependencies>
 	
+	<distributionManagement>
+		<snapshotRepository>
+			<id>smile-maven2-snapshot-repository</id>
+			<name>Smile Maven2 Snapshot Repository</name>
+			<url>scp://resources.smile.deri.ie/home/repoman/snapshots/</url>
+			<uniqueVersion>false</uniqueVersion>
+		</snapshotRepository>
+	</distributionManagement>
+
 </project>
