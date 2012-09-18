@@ -17,10 +17,10 @@
 	
 	<developers>
 		<developer>
-				<name>Ismael Rivera</name>
-				<url>http://www.deri.ie/about/team/member/ismael_rivera</url>
-				<organization>DERI (NUIG)</organization>
-				<organizationUrl>http://www.deri.ie</organizationUrl>
+			<name>Ismael Rivera</name>
+			<url>http://www.deri.ie/about/team/member/ismael_rivera</url>
+			<organization>DERI (NUIG)</organization>
+			<organizationUrl>http://www.deri.ie</organizationUrl>
 		</developer>
 	</developers>
 	
@@ -37,6 +37,19 @@
 			<id>semweb4j-snapshots</id>
 			<name>Semweb4j.org maven snapshot repo</name>
 			<url>http://semweb4j.org/snapshots/</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>fail</checksumPolicy>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>kiwi-project-snapshots</id>
+			<name>Kiwi project repo</name>
+			<url>http://devel.kiwi-project.eu:8080/nexus/content/repositories/snapshots/</url>
 			<releases>
 				<enabled>false</enabled>
 			</releases>
@@ -94,5 +107,37 @@
 			<uniqueVersion>false</uniqueVersion>
 		</snapshotRepository>
 	</distributionManagement>
+
+	<build> 
+		<extensions> 
+			<extension> 
+				<groupId>org.apache.maven.wagon</groupId> 
+				 <artifactId>wagon-ssh</artifactId> 
+				 <version>1.0-beta-7</version> 
+			</extension> 
+		</extensions> 
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.8</version>
+				<configuration>
+					<show>private</show>
+					<nohelp>true</nohelp>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
